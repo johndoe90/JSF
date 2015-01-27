@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<h:head>
+	</h:head>
+	
+	<h:body>
+
+		<h:form>
+			
+			<h:outputText id="output" value="#{user.name}" />
+			<h:inputText id="input" value="#{user.name}"/>
+			
+			<h:commandButton value="Welcome me" >
+				<f:ajax execute="input" render="output" />
+			</h:commandButton>
+			
+			
+		</h:form>
+
+	</h:body>
+</html>
